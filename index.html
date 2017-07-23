@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Web Fonts for Higher Quality UI Icons - Hongkiat.com
+</title>
+
+<!--  jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script>
+
+<!-- demo scripts -->
+<link rel="stylesheet" href="style.css">
+
+<!-- nav script -->
+<script src="../_nav/js/nav.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- nav meta -->
+<div class="demo-meta">
+  <h1 class="demo-title">Web Fonts for Higher Quality UI Icons</h1>
+  <p class="demo-desc">Serve better icons for high screen reolution with Web Font. This demo shows how we add the icons within the document and via the Pseudo-elements.</p>
+</div>
+
+<!-- demo content -->
+<div id="wrapper">
+
+<section id="icon-font-face">
+<h3>Using @font-face Rule</h3>
+<ul class="icon-font">
+	<li>h</li>
+	<li>i</li>
+	<li>j</li>
+	<li>A</li>
+	<li>I</li>
+</ul>	
+<pre>
+ul.icon-font {
+	font-family: WebSymbolsRegular;
+	font-size: 12pt;
+}
+</pre>
+</section>
+
+<section id="icon-font-pseudo">
+<h3>Using Pseudo-elements</h3>
+<ul class="icon-font pseudo">
+	<li>Reply</li>
+	<li>Reply All</li>
+	<li>Forward</li>
+	<li>Attachment</li>
+	<li>Image</li>
+</ul>
+<pre>
+ul.icon-font.pseudo li:before {
+	font-family: WebSymbolsRegular;
+	margin-right: 5px;
+}
+ul.icon-font.pseudo li:nth-child(1):before {
+	content: "h";
+}
+ul.icon-font.pseudo li:nth-child(2):before {
+	content: "i";
+}
+ul.icon-font.pseudo li:nth-child(3):before {
+	content: "j";
+}
+ul.icon-font.pseudo li:nth-child(4):before {
+	content: "A";
+}
+ul.icon-font.pseudo li:nth-child(5):before {
+	content: "I";
+}
+</pre>
+</section>
+
+<section id="icon-font-unicode">
+<h3>Embeding Private Unicode</h3>
+<div class="icon-font unicode">
+	<span>&#xf0c6;</span>
+</div>
+<pre>
+&amp;#xf0c6;
+</pre>	
+</section>
+</div>
+
+</body>
+</html>
